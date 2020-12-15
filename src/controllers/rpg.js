@@ -1,14 +1,15 @@
 const config = require('../../config').get().eradaniConnect;
 const eradaniConnect = require('@eradani-inc/eradani-connect');
 const connection = new eradaniConnect.transports.Xml("*LOCAL", config.username, config.password, config.connectionPath);
+// const connection = new eradaniConnect.transports.Odbc(config.odbc);
 const mypgm = require('../models/pgm-model');
 
-function linuxCalc(num) {
+function simpleCalc(num) {
     return connection.execute(mypgm, {
-        IBMICORES: num
+        SMALLNUM: num
     });
 }
 
 module.exports = {
-    linuxCalc
+    simpleCalc
 };

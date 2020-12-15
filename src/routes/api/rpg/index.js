@@ -4,8 +4,8 @@ const path = require('path');
 
 module.exports = function mountRPG(router) {
 
-    router.get('/linux-calc/ui', (req, res) => res.sendFile(path.join(__dirname, '../../../../public/linux-calc.html')));
+    router.get('/simple-calc/ui', (req, res) => res.sendFile(path.join(__dirname, '../../../../public/simple-calc.html')));
     
-    router.get('/linux-calc/:num', respond((req, res) => rpgController.linuxCalc(req.params.num)));
+    router.get('/simple-calc/:num', respond((req, res) => rpgController.simpleCalc(req.params.num)));
 
 };

@@ -1,10 +1,10 @@
      H*                                                                 
      H***************************************************************   
-     H**   LINUX_CALC                                               *   
+     H**   SIMPLECALC                                               *   
      H***************************************************************   
      H*                                                                 
      C     *ENTRY        PLIST                                          
-     C                   PARM                    ibmicores        15 0  
-     C                   PARM                    linuxservers     16 0  
-     C     IBMICORES     MULT      40            LINUXSERVERS           
+     C                   PARM                    smallnum         15 0  
+     C                   PARM                    largenum         16 0  
+     C     smallnum      MULT      40            largenum           
      C                   seton                                        LR
