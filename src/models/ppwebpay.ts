@@ -4,8 +4,8 @@
 import eradaniConnect from '@eradani-inc/eradani-connect';
 import * as configService from 'config';
 const config = configService.get();
-const dataLib = config.realTimePayNotifTable.dataLib;
-const table = config.realTimePayNotifTable.table;
+const dataLib = config.realTimePaymentTable.dataLib;
+const table = config.realTimePaymentTable.table;
 
 
 // ==============================================
