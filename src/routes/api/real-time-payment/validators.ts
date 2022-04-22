@@ -27,7 +27,6 @@ export const validatePOST = [
     body('source_id').isString().isLength( {min: 1, max: 20}).withMessage('id is required and cannot be more than 20 characters'),
     body('source_type').exists().isString().isIn(['customer', 'user', 'external_user']),
     body('timestamp').exists().isString(),
-    body('type').exists().isString().isIn(['payment.created', 'payment.processing', 'payment.updated', 'payment.cancelled',
-                                           'payment.declined', 'payment.returned', 'payment.rejected', 'payment.chargedback'])   
+    body('type').exists().isString().isIn(['payment.created', 'payment.updated', 'payment.cancelled'])   
 ];
 
