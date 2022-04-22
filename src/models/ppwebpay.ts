@@ -7,7 +7,6 @@ const config = configService.get();
 const dataLib = config.realTimePaymentTable.dataLib;
 const table = config.realTimePaymentTable.table;
 
-
 // ==============================================
 // Modules
 

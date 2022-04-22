@@ -7,10 +7,9 @@ import { insertPPWEBPAY } from 'src/models/ppwebpay';
 import { realTimePaymentRequest } from 'src/types/real-time-payment-request';
 import APIError from 'src/APIError';
 import transport from 'src/services/connection';
-var requestType:string;
+var requestType: string;
 
-
-// ==============================================
+//===============================================
 // Modules
 
 export const processRealTimePayment = async function (request: realTimePaymentRequest): Promise<any> {
@@ -18,13 +17,13 @@ export const processRealTimePayment = async function (request: realTimePaymentRe
 
     try {
         // Determine payment notification type; follows legacy PAYMENT, EDIT, CANCEL types
-        if (request.type == 'payment.created') {
+        if (request.type === 'payment.created') {
             requestType = 'PAYMENT';
-        } else if (request.type == 'payment.updated') {
+        } else if (request.type === 'payment.updated') {
             requestType = 'EDIT';
-        } else if (request.type == 'payment.cancelled') {
+        } else if (request.type === 'payment.cancelled') {
             requestType = 'CANCEL';
-        };
+        }
         // Map fields in request to params to pass for insert
         /* eslint-disable camelcase */
         const params = {

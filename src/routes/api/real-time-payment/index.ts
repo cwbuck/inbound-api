@@ -7,7 +7,6 @@ import validate from 'src/middlewares/validate';
 import * as controller from 'src/controllers/real-time-payment';
 import * as validators from './validators';
 
-
 //========================================
 // HTTP Requests
 
