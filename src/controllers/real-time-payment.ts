@@ -7,7 +7,7 @@ import { insertPPWEBPAY } from 'src/models/ppwebpay';
 import { realTimePaymentRequest } from 'src/types/real-time-payment-request';
 import APIError from 'src/APIError';
 import transport from 'src/services/connection';
-var requestType: string;
+let requestType: string;
 
 //===============================================
 // Modules
