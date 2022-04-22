@@ -38,7 +38,7 @@ export const insertPPWEBPAY = new eradaniConnect.run.Sql(
          ,?                                                 /* Payment Effective Date */
          ,?                                                 /* Payment Amount Due */
          ,?                                                 /* Due Date */
-         ,'PAYMENT'                                         /* Transaction Mode */
+         ,?                                                 /* Transaction Mode */
          , to_char(current_timestamp, 'YYYYMMDDHH24MISS')   /* Received Date/Time */
     )`,
     {
@@ -50,6 +50,7 @@ export const insertPPWEBPAY = new eradaniConnect.run.Sql(
             { name: 'feeAmount' },
             { name: 'paymentDate' },
             { name: 'currentBalance' },
+            { name: 'requestType' },
             { name: 'paymentDueDate' }
         ]
     }
