@@ -1,3 +1,6 @@
+//========================================
+// Interface definition
+
 /* eslint-disable */
 export interface realTimePaymentRequest {
     api_version: string;
