@@ -89,7 +89,7 @@ module.exports = {
         'quote-props': 'off',
         radix: 'error',
         'space-before-function-paren': 'off',
-        'spaced-comment': 'warn',
+        'spaced-comment': 'off',
         'use-isnan': 'error',
         '@typescript-eslint/tslint/config': [
             'error',
