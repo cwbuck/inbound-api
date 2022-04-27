@@ -49,8 +49,8 @@ export const insertPPWEBPAY = new eradaniConnect.run.Sql(
             { name: 'feeAmount' },
             { name: 'paymentDate' },
             { name: 'currentBalance' },
-            { name: 'paymentDueDate' }
-            { name: 'requestType' },
+            { name: 'paymentDueDate' },
+            { name: 'requestType' }
         ]
     }
 );
