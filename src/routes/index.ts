@@ -17,5 +17,4 @@ export default function addRoutes(router: Router) {
 
     router.use('/api', api);
     router.use('/auth', auth);
-
 }

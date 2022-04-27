@@ -17,6 +17,5 @@ export default function mountAPI(router: Router) {
     // Real Time Payment API
     const realTimePayment = express.Router();
     mountRealTimePayment(realTimePayment);
-    router.use('/realTimePayment', realTimePayment);
-
+    router.use('/real-time-payment', realTimePayment);
 }
