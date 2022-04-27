@@ -13,18 +13,18 @@ const table = config.realTimePayment.table;
 // Insert record into PPWEBPAY file on IBMi
 export const insertPPWEBPAY = new eradaniConnect.run.Sql(
     `INSERT INTO ${dataLib}.${table}(
-          BCNFID                                            /* Confirmation Id */
-        , BUSRID                                            /* User Id */
-        , BBILLCD                                           /* Biller Product Code */
-        , BPMTMTD                                           /* Payment Method */
-        , BPMTCHN                                           /* Payment Channel */
-        , BPMTAMT                                           /* Payment Amount */
-        , BCNVFEE                                           /* Convenience Fee */
-        , BPMTEFD                                           /* Payment Effective Date */
-        , BAMTDUE                                           /* Payment Amount Due */
-        , BDUEDTE                                           /* Due Date */
-        , BTRNSMD                                           /* Transaction Mode */
-        , BRCVDT                                            /* Received Date/Time */
+          BCNFID           /* Confirmation Id */
+        , BUSRID           /* User Id */
+        , BBILLCD          /* Biller Product Code */
+        , BPMTMTD          /* Payment Method */
+        , BPMTCHN          /* Payment Channel */
+        , BPMTAMT          /* Payment Amount */
+        , BCNVFEE          /* Convenience Fee */
+        , BPMTEFD          /* Payment Effective Date */
+        , BAMTDUE          /* Payment Amount Due */
+        , BDUEDTE          /* Due Date */
+        , BTRNSMD          /* Transaction Mode */
+        , BRCVDT           /* Received Date/Time */
     ) 
     VALUES (
           ?                                                 /* Confirmation Id */
@@ -49,8 +49,8 @@ export const insertPPWEBPAY = new eradaniConnect.run.Sql(
             { name: 'feeAmount' },
             { name: 'paymentDate' },
             { name: 'currentBalance' },
-            { name: 'requestType' },
             { name: 'paymentDueDate' }
+            { name: 'requestType' },
         ]
     }
 );
