@@ -2,9 +2,12 @@ import express, { Router } from 'express';
 import mountRPG from './rpg';
 import mountSQL from './sql';
 import mountRealTimePayment from './real-time-payment';
+import requireAuth from 'src/middlewares/require-auth';
 
 export default function mountAPI(router: Router) {
     // You can set auth requirements on a whole API section by putting `router.use(requireAuth);` here instead of on individual route definitions
+
+    router.use(requireAuth); 
 
     const rpg = express.Router();
     mountRPG(rpg);
